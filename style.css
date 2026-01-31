@@ -20,6 +20,7 @@ h1,h2,h3,h4,h5,h6{
 
   height:109px;
   background-color: #C4C4C4;
+  z-index:1;
 }
 
 .left-section{
@@ -72,4 +73,68 @@ h1,h2,h3,h4,h5,h6{
   width:500px;
 }
 
+.adicional-information-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  height:289px;
+  
+}
+
+.hobbies-container{
+  height:249px;
+  width:595px;
+  margin:26px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.games,
+.hobbies{
+ display:flex;
+ align-items: start;
+  margin-top:10px;
+}
+
+.game,
+.hobbie{
+  height:150px;
+  width:104px;
+  background-color: #DFDFDF;
+  border-radius: 10px;
+  margin-left:6px;
+  padding-bottom:10px;
+  
+  display:flex;
+  align-items: end;
+  justify-content: center;
+  position:relative;
+}
+
+.games-container{
+  height:249px;
+  width:595px;
+  margin:26px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  
+}
+
+
+.games-list,
+.hobbies-list{
+  display:flex;
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+
+.game-number{
+  position:absolute;
+  top:5px;
+  left:10px;
+}
