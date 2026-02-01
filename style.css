@@ -1,5 +1,5 @@
 body{
-  padding-top:100px;
+  padding-top:110px;
   margin:0;
   font-family: 'Roboto', sans-serif;
 }
@@ -18,19 +18,18 @@ h1,h2,h3,h4,h5,h6{
   top:0;
   left:0;
   right:0;
-
+  
   height:109px;
   background-color: #C4C4C4;
+  
   z-index:1;
+  padding-left:30px;
+  padding-right:30px;
 }
 
-.left-section{
-  margin-left:30px;
-}
 
-.right-section{
-  margin-right:30px;
-}
+
+
 
 .header-link{
   margin-right:30px;
@@ -48,8 +47,10 @@ h1,h2,h3,h4,h5,h6{
 .profile-container{
   display:flex;
   align-items: center;
+  justify-content: center;
   background-color: #F3F3F3;
-  height:318px;
+  padding: 32px 0px;
+  gap:64px;
 }
 
 .profile-photo{
@@ -59,35 +60,30 @@ h1,h2,h3,h4,h5,h6{
   object-position: center;
 
   border-radius: 100px;
-
 }
 
 .profile-photo-container{
   display:flex;
   align-items: center;
   justify-content: end;
-  width:500px;
-  margin-right:70px;
+  
 }
 
 .profile-info{
-  width:500px;
+  width:40%;
 }
 
 .adicional-information-container{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 
-  height:289px;
+  gap:24px;
   padding: 35px;
-  
 }
 
 .hobbies-container{
-  height:249px;
-  width:595px;
-  margin:26px;
   
   display: flex;
   flex-direction: column;
@@ -118,10 +114,6 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .games-container{
-  height:249px;
-  width:595px;
-  margin:26px;
-
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -132,7 +124,10 @@ h1,h2,h3,h4,h5,h6{
 .games-list,
 .hobbies-list{
   display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
+  gap:16px;
   padding:0;
   margin:0;
 }
@@ -147,9 +142,7 @@ h1,h2,h3,h4,h5,h6{
   display:flex;
   flex-direction: column;
   row-gap:30px;
-  height: 236px;
-  width: 1168px;
-  margin-left:136px;
+  padding-left: 60px;
   align-items: start;
   position: relative;
   margin-top:50px;
@@ -159,7 +152,7 @@ h1,h2,h3,h4,h5,h6{
   display:flex;
   flex-direction: column;
   row-gap:10px;
-  width:1000px;
+  width:90%;
   padding-left:25px;
 }
 .feedback-input{
@@ -197,16 +190,18 @@ h1,h2,h3,h4,h5,h6{
   font-family:'Roboto', sans-serif;
   
 }
-
+.feedbacks div{
+  display:flex;
+  justify-content: flex-end;
+  width:100%;
+}
 .enviar-button{
   height:39px;
   width:127px;
-  position: absolute;
-  bottom:0;
-  right:170px;
   background-color: #D9D9D9;
   border:none;
   border-radius:4px;
+  margin-right:30px;
 }
 
 .enviar-button:hover{
@@ -217,7 +212,6 @@ h1,h2,h3,h4,h5,h6{
 
 .enviar-button:active{
   background-color: grey;
-  font-size:18px;
   color:white;
 }
 
@@ -226,9 +220,92 @@ h1,h2,h3,h4,h5,h6{
   height:70px;
   background-color: #C4C4C4;
   margin-top:60px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-nav{
   display:flex;
+
+  gap:10px;
+  padding-left:60px;
 }
 
+.icon{
+  height:32px;
+  width:32px;
+}
+
+.contato-button{
+  height:38px;
+  width:162px;
+  padding: 8px 16px;
+  background-color: #DFDFDF;
+  border-radius: 5px;
+  border: none;
+  font-weight:600;
+  margin-right:50px;
+}
+
+.contato-button:hover{
+  opacity:0.8;
+  box-shadow: 1px 1px 5px rgba(0,0,0,2);
+  color:black;
+}
+
+.contato-button:active{
+  background-color: grey;
+  color:white;
+}
+
+@media (max-width:1400px){
+  .hobbies-container{
+    align-items: start;
+  }
+}
+
+@media (max-width:630px){
+  .profile-container{
+    flex-direction: column;
+    gap:32px;
+
+  }
+  .profile-info{
+    width:95%;
+  }
+  .feedback-container{
+    width:80%;
+  }
+  .feedbacks div{
+  justify-content: center;
+  }
+  .footer{
+    flex-direction: column-reverse;
+    margin:0;
+    
+    height: 127px;
+    margin-top:10px;
+  }
+  
+  
+}
+@media (max-width:450px){
+  .feedback-container{
+    padding-left: 30px;
+  }
+  .feedbacks{
+    font-size:14px;
+  }
+  .feedback-textarea{
+    padding-top:10px;
+  }
+  .footer{
+    justify-content: center;
+  }
+  .footer-nav{
+    padding-left:0;
+  }
+  .contato-button{
+    margin:0;
+  }
+}
